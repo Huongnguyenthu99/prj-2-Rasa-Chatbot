@@ -1,0 +1,23 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+- story: hi
+  steps:
+  - intent: hello
+  - action: utter_hello
+  - intent: ask_product_num
+  - action: action_product_num
+
+- story: product_num
+  steps:
+  - intent: ask_product_num
+  - action: action_product_num
+
+- story: product_price
+  steps:
+  - intent: ask_product_price
+  - action: action_product_num
+
+- story: product_warranty
+  steps:
+  - intent: ask_product_warranty
+  - action: utter_product_warranty

@@ -1,0 +1,90 @@
+version: "2.0"
+
+nlu:
+- intent: hello
+  examples: |
+    - admin ơi
+    - ad ơi
+    - shop ơi
+    - alo
+    - helu
+    - chào
+    - xin chào
+    - chào shop
+    - xin chào shop
+    - hi
+    - hi shop
+    - hello
+
+- intent: ask_product_num
+  examples: |
+    - bộ sản phẩm [SP12](productCode) còn không shop ơi   
+    - mẫu [SP5](productCode) còn không nhỉ?
+    - mã [SP1](productCode) còn không shop?
+    - mẫu [SP2](productCode) còn hàng không
+    - mẫu này còn hàng không?
+
+- intent: ask_product_size
+  examples: |
+    - SP1 còn size không
+
+- intent: ask_consult_size
+  examples: |
+    - sản phẩm này có vừa với người [60kg](weight) không
+    - tư vấn [size](size) cho mình với
+    - mình [45kg](weight), [1m65](height) thì mặc size nào ạ
+    - [75kg](weight)
+    - [m65](height)
+
+- intent: ask_product_price
+  examples: |
+    - giá [SP12](productCode) bao nhiêu
+    - giá [SP12](productCode) như thế nào nhỉ
+    - giá [SP5](productCode) sản phẩm này bao nhiêu
+    - bộ này giá bao nhiêu
+    - xin giá
+    - giá bộ [SP12](productCode) này bao nhiêu shop ơi
+    - giá bộ này bao nhiêu vậy shop
+    - áo này giá bao nhiêu
+    - bao nhiêu một bộ sản phẩm [SP1](productCode)
+    - bn một bộ [SP1](productCode)
+    - cho mình xin giá [SP1](productCode) shop ơi
+    - báo giá [SP1](productCode) giúp mình nhé
+    - xin giá sh ơi
+    - [SP1](productCode) này bao nhiêu tiền một bộ vậy
+    - [SP1](productCode) bao nhiêu ạ
+    - [SP1](productCode) bn ạ
+
+- intent: ask_product_category
+  examples: |
+    - tôi muốn mua [áo khoác nỉ](category) 
+    - cho mk hỏi shop có [chân váy](category) không
+
+- intent: ask_shipment
+  examples: |
+    - đặt hàng như thế nào vậy shop?
+    - mk có thể chọn đơn vị vận chuyển không?
+    - ship bao nhiêu
+    - có mất tiền ship không 
+    - có ship An Giang không
+
+- intent: ask_sale
+  examples: |
+    - shop có chương trình [khuyến mại](sale) nào không
+    - có [giảm giá](sale) không ạ
+
+- intent: ask_order
+  examples: |
+    - tôi muốn đặt hàng
+    - đặt hàng như thế nào nhỉ?
+    - đặt hàng
+    - mua hàng như thế nào vậy
+    - mình muốn đặt hàng
+
+- intent: ask_product_warranty
+  examples: |
+    - được đổi trả trong bao lâu vậy
+    - không vừa có được đổi không
+    - trả hàng trong vòng bao lâu
+    - có đổi trả được không
+    - đổi trả như thế nào

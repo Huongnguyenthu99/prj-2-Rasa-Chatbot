@@ -1,0 +1,63 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- hello
+- ask_product_num
+- bot_challenge
+- goodbye
+- ask_product_size
+- ask_consult_size
+- ask_product_price
+- ask_product_category
+- ask_shipment
+- ask_sale
+- ask_order
+- ask_product_warranty
+entities:
+- productCode
+- sale
+- category
+- weight
+- size
+- height
+slots:
+  height:
+    type: text
+    influence_conversation: true
+  productCode:
+    type: text
+    influence_conversation: true
+  size:
+    type: text
+    influence_conversation: true
+  weight:
+    type: text
+    influence_conversation: true
+responses:
+  utter_hello:
+  - text: Xin chào, shop có thể giúp gì cho bạn?
+  - text: Xin chào, shop rất hân hạnh được phục vụ bạn!
+  utter_default:
+  - text: Xin lỗi, shop không hiểu yêu cầu của bạn. Bạn vui lòng để lại số điện thoại
+      để nhân viên bên mình hỗ trợ bạn
+  - text: Xin lỗi, câu hỏi của bạn nằm ngoài khả năng của tôi.
+  - text: Bạn có cần hỗ trợ qua điện thoại viên không
+  utter_product_warranty:
+  - text: Bạn có thể đổi trả trong vòng 3 ngày kể từ ngày mua sản phẩm. \nVui lòng
+      giữ nguyên tem mác nếu muốn đổi bạn nhé!
+  utter_ask_shipment:
+  - text: Dạ tất cả sản phẩm của shop đều được miễn phí vận chuyển và được giao hàng
+      qua đơn vị vận chuyển duy nhất là VietelPost.
+  utter_product_size:
+  - text: Dạ shop còn fullsize cho tất cả các loại sản phẩm
+actions:
+- action_product_num
+- action_sale_program
+- action_product_price
+- action_consult_size
+- utter_hello
+- utter_product_warranty
+- utter_default
+- utter_ask_shipment
+- utter_product_size
